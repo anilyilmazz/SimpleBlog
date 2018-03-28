@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+    <div>
+        @Html.RouteLink("Backto Home Page", "home");
+        
+        <form method="post">
+            <input type="text" name="login" />
+            <input type="submit" value="Gönder"  />
+            <center><h1>You are in Login Page</h1></center>
+        </form>
+     
+              
+
+   @for (var i=0;i<10;i++)
+   {
+       <text>
+        <p>Login Login</p>
+        </text>
+   }
+
+     
+
+
+       
+
+    </div>
+</body>
+</html>
