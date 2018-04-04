@@ -14,5 +14,9 @@ namespace SimpleBlog.Areas.Admin.Controllers
         {
             return Content("Admin area Posts controller Index action result ");
         }
+        public ActionResult List()
+        {
+            return View();
+        }
     }
 }
