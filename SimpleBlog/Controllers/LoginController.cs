@@ -24,6 +24,7 @@ namespace SimpleBlog.Controllers
             {
                 return View(form);
             }
+            
            
             return Content("Your İnformation<br>"+form.UserName+"<br>"+form.Password);
         }
