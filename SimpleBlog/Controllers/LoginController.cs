@@ -7,6 +7,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Net.Mail;
 using System.Text;
+using System.Web.Security;
 
 namespace SimpleBlog.Controllers
 {
@@ -24,7 +25,8 @@ namespace SimpleBlog.Controllers
             {
                 return View(form);
             }
-            
+            //Login Olma
+            FormsAuthentication.SetAuthCookie(form.UserName, true);
            
             return Content("Your İnformation<br>"+form.UserName+"<br>"+form.Password);
         }
