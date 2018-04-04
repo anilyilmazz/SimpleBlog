@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Net.Mail;
+using System.Text;
 
 namespace SimpleBlog.Controllers
 {
@@ -18,7 +20,11 @@ namespace SimpleBlog.Controllers
         [HttpPost]
         public ActionResult Index(Login form)
         {
-            //return View();
+            if (!ModelState.IsValid)
+            {
+                return View(form);
+            }
+           
             return Content("Your İnformation<br>"+form.UserName+"<br>"+form.Password);
         }
     }
